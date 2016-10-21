@@ -28,6 +28,7 @@
 \usepackage{hyperref}
 \usepackage{amsthm}
 \usepackage{tikz}
+\usepackage{pifont}
 
 \DeclareGraphicsExtensions{.png, .jpg, .pdf}
 
@@ -45,6 +46,7 @@
 \institute[University of Bristol] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
 School of Physics and Department of Electrical and Electronic Engineering\\
+Quantum Engineering Centre for Doctoral Training\\
 University of Bristol \\ % Your institution for the title page
 \medskip
 \textit{\href{mailto:dominic.moylett@bristol.ac.uk}{dominic.moylett@bristol.ac.uk}} % Your email address
@@ -87,7 +89,7 @@ To celebrate, I wanted to do a tour of Europe.
 \end{frame}
 
 \begin{frame}
-\frametitle{Where we wanted to visit}
+\frametitle{The Grand Tour}
 \begin{center}
 \includegraphics[scale=0.25]{interrail_selected}
 \end{center}
@@ -102,12 +104,116 @@ While route finding is the oldest instance of the problem, there are a number of
 \end{frame}
 
 \begin{frame}
+\frametitle{Example}
+\begin{center}
+\begin{tikzpicture}
+\path(0,0) node(Amsterdam){Amsterdam} (2,1) node(Hamburg){Hamburg} (4,0) node(Berlin){Berlin} (2,2) node(Copenhagen){Copenhagen} (0,-1) node(Brussels){Brussels} (6,-1) node(Warsaw){Warsaw} (2,-2) node(Frankfurt){Frankfurt} (4,-2) node(Prague){Prague} (2,-3) node(Munich){Munich} (4,-3) node(Vienna){Vienna};
+
+\draw (Amsterdam) -- node[left]{11.25} (Copenhagen);
+\draw (Amsterdam) -- node[above]{6.17} (Berlin);
+\draw (Amsterdam) -- node[left]{1.88} (Brussels);
+\draw (Brussels) -- node[above]{3.17} (Frankfurt);
+\draw (Frankfurt) -- node[left]{3.17} (Munich);
+\draw (Munich) -- node[above]{6.08} (Prague);
+\draw (Munich) -- node[below]{4.17} (Vienna);
+\draw (Prague) -- node[]{4.58} (Berlin);
+\draw (Prague) -- node[]{4.5} (Vienna);
+\draw (Berlin) -- node[above]{6.08} (Warsaw);
+\draw (Prague) -- node[above]{8.67} (Warsaw);
+\draw (Vienna) -- node[below]{7.5} (Warsaw);
+\draw (Hamburg) -- node[right]{4.5} (Copenhagen);
+\draw (Berlin) -- node[right]{1.58} (Hamburg);
+\end{tikzpicture}
+
+Our example graph.
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example}
+\begin{center}
+\begin{tikzpicture}
+\path(0,0) node(Amsterdam){Amsterdam} (2,1) node(Hamburg){Hamburg} (4,0) node(Berlin){Berlin} (2,2) node(Copenhagen){Copenhagen} (0,-1) node(Brussels){Brussels} (6,-1) node(Warsaw){Warsaw} (2,-2) node(Frankfurt){Frankfurt} (4,-2) node(Prague){Prague} (2,-3) node(Munich){Munich} (4,-3) node(Vienna){Vienna};
+
+\draw (Amsterdam) -- node[left]{11.25} (Copenhagen);
+\draw[line width=1.5pt] (Amsterdam) -- node[above]{6.17} (Berlin);
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{1.88} (Brussels);
+\draw[line width=1.5pt] (Brussels) -- node[above]{3.17} (Frankfurt);
+\draw[line width=1.5pt] (Frankfurt) -- node[left]{3.17} (Munich);
+\draw (Munich) -- node[above]{6.08} (Prague);
+\draw[line width=1.5pt] (Munich) -- node[below]{4.17} (Vienna);
+\draw[line width=1.5pt] (Prague) -- node[]{4.58} (Berlin);
+\draw[line width=1.5pt] (Prague) -- node[]{4.5} (Vienna);
+\draw (Berlin) -- node[above]{6.08} (Warsaw);
+\draw (Prague) -- node[above]{8.67} (Warsaw);
+\draw (Vienna) -- node[below]{7.5} (Warsaw);
+\draw (Hamburg) -- node[right]{4.5} (Copenhagen);
+\draw (Berlin) -- node[right]{1.58} (Hamburg);
+\end{tikzpicture}
+
+\ding{55} Not a Hamiltonian cycle.
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example}
+\begin{center}
+\begin{tikzpicture}
+\path(0,0) node(Amsterdam){Amsterdam} (2,1) node(Hamburg){Hamburg} (4,0) node(Berlin){Berlin} (2,2) node(Copenhagen){Copenhagen} (0,-1) node(Brussels){Brussels} (6,-1) node(Warsaw){Warsaw} (2,-2) node(Frankfurt){Frankfurt} (4,-2) node(Prague){Prague} (2,-3) node(Munich){Munich} (4,-3) node(Vienna){Vienna};
+
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{11.25} (Copenhagen);
+\draw (Amsterdam) -- node[above]{6.17} (Berlin);
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{1.88} (Brussels);
+\draw[line width=1.5pt] (Brussels) -- node[above]{3.17} (Frankfurt);
+\draw[line width=1.5pt] (Frankfurt) -- node[left]{3.17} (Munich);
+\draw[line width=1.5pt] (Munich) -- node[above]{6.08} (Prague);
+\draw (Munich) -- node[below]{4.17} (Vienna);
+\draw (Prague) -- node[]{4.58} (Berlin);
+\draw[line width=1.5pt] (Prague) -- node[]{4.5} (Vienna);
+\draw[line width=1.5pt] (Berlin) -- node[above]{6.08} (Warsaw);
+\draw (Prague) -- node[above]{8.67} (Warsaw);
+\draw[line width=1.5pt] (Vienna) -- node[below]{7.5} (Warsaw);
+\draw[line width=1.5pt] (Hamburg) -- node[right]{4.5} (Copenhagen);
+\draw[line width=1.5pt] (Berlin) -- node[right]{1.58} (Hamburg);
+\end{tikzpicture}
+
+\ding{55} Not the shortest Hamiltonian cycle.
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example}
+\begin{center}
+\begin{tikzpicture}
+\path(0,0) node(Amsterdam){Amsterdam} (2,1) node(Hamburg){Hamburg} (4,0) node(Berlin){Berlin} (2,2) node(Copenhagen){Copenhagen} (0,-1) node(Brussels){Brussels} (6,-1) node(Warsaw){Warsaw} (2,-2) node(Frankfurt){Frankfurt} (4,-2) node(Prague){Prague} (2,-3) node(Munich){Munich} (4,-3) node(Vienna){Vienna};
+
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{11.25} (Copenhagen);
+\draw (Amsterdam) -- node[above]{6.17} (Berlin);
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{1.88} (Brussels);
+\draw[line width=1.5pt] (Brussels) -- node[above]{3.17} (Frankfurt);
+\draw[line width=1.5pt] (Frankfurt) -- node[left]{3.17} (Munich);
+\draw (Munich) -- node[above]{6.08} (Prague);
+\draw[line width=1.5pt] (Munich) -- node[below]{4.17} (Vienna);
+\draw (Prague) -- node[]{4.58} (Berlin);
+\draw[line width=1.5pt] (Prague) -- node[]{4.5} (Vienna);
+\draw[line width=1.5pt] (Berlin) -- node[above]{6.08} (Warsaw);
+\draw[line width=1.5pt] (Prague) -- node[above]{8.67} (Warsaw);
+\draw (Vienna) -- node[below]{7.5} (Warsaw);
+\draw[line width=1.5pt] (Hamburg) -- node[right]{4.5} (Copenhagen);
+\draw[line width=1.5pt] (Berlin) -- node[right]{1.58} (Hamburg);
+\end{tikzpicture}
+
+\ding{51} Our solution to the Travelling Salesman Problem.
+\end{center}
+\end{frame}
+
+\begin{frame}
 \frametitle{Difficulty of the Travelling Salesman Problem}
 The Travelling Salesman Problem is $NP$-hard, so finding a polynomial time solution would prove that $P = NP$.
 
 A na\"ive solution would take $O(|V|!)$ time by searching over every permutation of the vertices.
 
-D\"urr and H\o yer's algorithm for minimum finding\footnote{{\em arXiv:quant-ph/9607014}} could be applied to this approach to achieve $O(\sqrt{|V|!})$ time.
+D\"urr and H\o yer's quantum algorithm for minimum finding\footnote{{\em arXiv:quant-ph/9607014}} could be applied to this approach to achieve $O(\sqrt{|V|!})$ time.
 
 But other more efficient classical algorithms exist. Can these be sped up using quantum algorithms?
 \end{frame}
@@ -133,7 +239,7 @@ Key components for many algorithms have limited quantum speedup:
 \begin{itemize}
 \item The Held-Karp algorithm\footnote{{\em Journal of the Society for Industrial and Applied Mathematics}, {\bf 10}(1), pp.\ 196-210 (1962)} relies on dynamic programming (no known speedup).
 \item Christofides' algorithm\footnote{{\em Management Sciences Research Report 388, Graduate School of Industrial Administration, CMU} (1976)} relies on finding a minimum weight perfect matching (polynomial speedup for bipartite graphs).
-\item Algorithms which use Nearest Neighbour can be sped up from $O(n^2)$ to $O(n^{3/2})$ time via minimum finding.
+\item Algorithms which use Nearest Neighbour can be sped up from $O(|V|^2)$ to $O(|V|^{3/2})$ time via minimum finding.
 \end{itemize}
 
 Other algorithms do not even have known performance\footnote{{\em Science}, {\bf 220}(4598), pp.\ 671--680 (1983)}.
@@ -598,8 +704,8 @@ Eppstein's algorithm was the first backtracking algorithm to solve the Travellin
 
 \begin{itemize}
 \item Iwama and Nakashima\footnote{13th Annual International Conference on Computing and Combinatorics, pp.\ 108--117 (2007)} have an algorithm for bounded degree $3$ which runs in $O(1.251^n)$ time.
-\item Li\'{s}kiewicz and Schuster\footnote{{\em Journal of Discrete Algorithms}, {\bf 27}, pp.\ 1--20 (2014)} have an algorithm for bounded degree $3$ which runs in $O(1.251^n)$ time and challenge the result of Iwama and Nakashima.
-\item Xiao and Nagamochi have given runtimes of $O(1.2312^n)$ and $O(1.692^n)$ for bounded degrees $3$\footnote{{\em Algorithmica}, {\bf 74}(2), pp.\ 713--741 (2016)} and $4$\footnote{{\em Theory of Computing Systems}, {\bf 58}(2), pp.\ 241--272 (2016)}, respectively.
+\item Li\'{s}kiewicz and Schuster\footnote{{\em Journal of Discrete Algorithms}, {\bf 27}, pp.\ 1--20 (2014)} have an algorithm for bounded degree $3$ which runs in $O(1.2553^n)$ time and challenge the result of Iwama and Nakashima.
+\item Xiao and Nagamochi\footnote{{\em Algorithmica}, {\bf 74}(2), pp.\ 713--741 (2016)}\footnote{{\em Theory of Computing Systems}, {\bf 58}(2), pp.\ 241--272 (2016)} have given runtimes of $O(1.2312^n)$ and $O(1.692^n)$ for bounded degrees $3$ and $4$, respectively.
 \end{itemize}
 \end{frame}
 
