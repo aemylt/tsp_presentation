@@ -13,7 +13,7 @@
 
 %----------------------------------------------------------------------------------------
 %    PACKAGES AND THEMES
-%----------------------------------------------------------------------------------------
+%-----------------------------------------z-----------------------------------------------
 
 \documentclass[]{beamer}
 
@@ -45,8 +45,7 @@
 \author[Dominic J. Moylett]{Dominic J. Moylett\footnote{Work completed in collaboration with Ashley Montanaro and Noah Linden.}} % Your name
 \institute[University of Bristol] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-School of Physics and Department of Electrical and Electronic Engineering\\
-Quantum Engineering Centre for Doctoral Training\\
+Centre for Quantum Photonics and Quantum Engineering Centre for Doctoral Training\\
 University of Bristol \\ % Your institution for the title page
 \medskip
 \textit{\href{mailto:dominic.moylett@bristol.ac.uk}{dominic.moylett@bristol.ac.uk}} % Your email address
@@ -109,20 +108,20 @@ While route finding is the oldest instance of the problem, there are a number of
 \begin{tikzpicture}
 \path(0,0) node(Amsterdam){Amsterdam} (2,1) node(Hamburg){Hamburg} (4,0) node(Berlin){Berlin} (2,2) node(Copenhagen){Copenhagen} (0,-1) node(Brussels){Brussels} (6,-1) node(Warsaw){Warsaw} (2,-2) node(Frankfurt){Frankfurt} (4,-2) node(Prague){Prague} (2,-3) node(Munich){Munich} (4,-3) node(Vienna){Vienna};
 
-\draw (Amsterdam) -- node[left]{11.25} (Copenhagen);
-\draw (Amsterdam) -- node[above]{6.17} (Berlin);
-\draw (Amsterdam) -- node[left]{1.88} (Brussels);
-\draw (Brussels) -- node[above]{3.17} (Frankfurt);
-\draw (Frankfurt) -- node[left]{3.17} (Munich);
-\draw (Munich) -- node[above]{6.08} (Prague);
-\draw (Munich) -- node[below]{4.17} (Vienna);
-\draw (Prague) -- node[]{4.58} (Berlin);
-\draw (Prague) -- node[]{4.5} (Vienna);
-\draw (Berlin) -- node[above]{6.08} (Warsaw);
-\draw (Prague) -- node[above]{8.67} (Warsaw);
-\draw (Vienna) -- node[below]{7.5} (Warsaw);
-\draw (Hamburg) -- node[right]{4.5} (Copenhagen);
-\draw (Berlin) -- node[right]{1.58} (Hamburg);
+\draw (Amsterdam) -- node[left]{675} (Copenhagen);
+\draw (Amsterdam) -- node[above]{370} (Berlin);
+\draw (Amsterdam) -- node[left]{113} (Brussels);
+\draw (Brussels) -- node[above]{190} (Frankfurt);
+\draw (Frankfurt) -- node[left]{190} (Munich);
+\draw (Munich) -- node[above]{365} (Prague);
+\draw (Munich) -- node[below]{250} (Vienna);
+\draw (Prague) -- node[left]{275} (Berlin);
+\draw (Prague) -- node[left]{270} (Vienna);
+\draw (Berlin) -- node[above]{365} (Warsaw);
+\draw (Prague) -- node[above]{520} (Warsaw);
+\draw (Vienna) -- node[below]{450} (Warsaw);
+\draw (Hamburg) -- node[right]{270} (Copenhagen);
+\draw (Berlin) -- node[right]{95} (Hamburg);
 \end{tikzpicture}
 
 Our example graph.
@@ -135,20 +134,20 @@ Our example graph.
 \begin{tikzpicture}
 \path(0,0) node(Amsterdam){Amsterdam} (2,1) node(Hamburg){Hamburg} (4,0) node(Berlin){Berlin} (2,2) node(Copenhagen){Copenhagen} (0,-1) node(Brussels){Brussels} (6,-1) node(Warsaw){Warsaw} (2,-2) node(Frankfurt){Frankfurt} (4,-2) node(Prague){Prague} (2,-3) node(Munich){Munich} (4,-3) node(Vienna){Vienna};
 
-\draw (Amsterdam) -- node[left]{11.25} (Copenhagen);
-\draw[line width=1.5pt] (Amsterdam) -- node[above]{6.17} (Berlin);
-\draw[line width=1.5pt] (Amsterdam) -- node[left]{1.88} (Brussels);
-\draw[line width=1.5pt] (Brussels) -- node[above]{3.17} (Frankfurt);
-\draw[line width=1.5pt] (Frankfurt) -- node[left]{3.17} (Munich);
-\draw (Munich) -- node[above]{6.08} (Prague);
-\draw[line width=1.5pt] (Munich) -- node[below]{4.17} (Vienna);
-\draw[line width=1.5pt] (Prague) -- node[]{4.58} (Berlin);
-\draw[line width=1.5pt] (Prague) -- node[]{4.5} (Vienna);
-\draw (Berlin) -- node[above]{6.08} (Warsaw);
-\draw (Prague) -- node[above]{8.67} (Warsaw);
-\draw (Vienna) -- node[below]{7.5} (Warsaw);
-\draw (Hamburg) -- node[right]{4.5} (Copenhagen);
-\draw (Berlin) -- node[right]{1.58} (Hamburg);
+\draw (Amsterdam) -- node[left]{675} (Copenhagen);
+\draw[line width=1.5pt] (Amsterdam) -- node[above]{370} (Berlin);
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{113} (Brussels);
+\draw[line width=1.5pt] (Brussels) -- node[above]{190} (Frankfurt);
+\draw[line width=1.5pt] (Frankfurt) -- node[left]{190} (Munich);
+\draw (Munich) -- node[above]{365} (Prague);
+\draw[line width=1.5pt] (Munich) -- node[below]{250} (Vienna);
+\draw[line width=1.5pt] (Prague) -- node[left]{275} (Berlin);
+\draw[line width=1.5pt] (Prague) -- node[left]{270} (Vienna);
+\draw (Berlin) -- node[above]{365} (Warsaw);
+\draw (Prague) -- node[above]{520} (Warsaw);
+\draw (Vienna) -- node[below]{450} (Warsaw);
+\draw (Hamburg) -- node[right]{270} (Copenhagen);
+\draw (Berlin) -- node[right]{95} (Hamburg);
 \end{tikzpicture}
 
 \ding{55} Not a Hamiltonian cycle.
@@ -161,23 +160,23 @@ Our example graph.
 \begin{tikzpicture}
 \path(0,0) node(Amsterdam){Amsterdam} (2,1) node(Hamburg){Hamburg} (4,0) node(Berlin){Berlin} (2,2) node(Copenhagen){Copenhagen} (0,-1) node(Brussels){Brussels} (6,-1) node(Warsaw){Warsaw} (2,-2) node(Frankfurt){Frankfurt} (4,-2) node(Prague){Prague} (2,-3) node(Munich){Munich} (4,-3) node(Vienna){Vienna};
 
-\draw[line width=1.5pt] (Amsterdam) -- node[left]{11.25} (Copenhagen);
-\draw (Amsterdam) -- node[above]{6.17} (Berlin);
-\draw[line width=1.5pt] (Amsterdam) -- node[left]{1.88} (Brussels);
-\draw[line width=1.5pt] (Brussels) -- node[above]{3.17} (Frankfurt);
-\draw[line width=1.5pt] (Frankfurt) -- node[left]{3.17} (Munich);
-\draw[line width=1.5pt] (Munich) -- node[above]{6.08} (Prague);
-\draw (Munich) -- node[below]{4.17} (Vienna);
-\draw (Prague) -- node[]{4.58} (Berlin);
-\draw[line width=1.5pt] (Prague) -- node[]{4.5} (Vienna);
-\draw[line width=1.5pt] (Berlin) -- node[above]{6.08} (Warsaw);
-\draw (Prague) -- node[above]{8.67} (Warsaw);
-\draw[line width=1.5pt] (Vienna) -- node[below]{7.5} (Warsaw);
-\draw[line width=1.5pt] (Hamburg) -- node[right]{4.5} (Copenhagen);
-\draw[line width=1.5pt] (Berlin) -- node[right]{1.58} (Hamburg);
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{675} (Copenhagen);
+\draw (Amsterdam) -- node[above]{370} (Berlin);
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{113} (Brussels);
+\draw[line width=1.5pt] (Brussels) -- node[above]{190} (Frankfurt);
+\draw[line width=1.5pt] (Frankfurt) -- node[left]{190} (Munich);
+\draw[line width=1.5pt] (Munich) -- node[above]{365} (Prague);
+\draw (Munich) -- node[below]{250} (Vienna);
+\draw (Prague) -- node[left]{275} (Berlin);
+\draw[line width=1.5pt] (Prague) -- node[left]{270} (Vienna);
+\draw[line width=1.5pt] (Berlin) -- node[above]{365} (Warsaw);
+\draw (Prague) -- node[above]{520} (Warsaw);
+\draw[line width=1.5pt] (Vienna) -- node[below]{450} (Warsaw);
+\draw[line width=1.5pt] (Hamburg) -- node[right]{270} (Copenhagen);
+\draw[line width=1.5pt] (Berlin) -- node[right]{95} (Hamburg);
 \end{tikzpicture}
 
-\ding{55} Not the shortest Hamiltonian cycle.
+\ding{55} Not the shortest Hamiltonian cycle. (Length: $2983$ Minutes)
 \end{center}
 \end{frame}
 
@@ -187,23 +186,23 @@ Our example graph.
 \begin{tikzpicture}
 \path(0,0) node(Amsterdam){Amsterdam} (2,1) node(Hamburg){Hamburg} (4,0) node(Berlin){Berlin} (2,2) node(Copenhagen){Copenhagen} (0,-1) node(Brussels){Brussels} (6,-1) node(Warsaw){Warsaw} (2,-2) node(Frankfurt){Frankfurt} (4,-2) node(Prague){Prague} (2,-3) node(Munich){Munich} (4,-3) node(Vienna){Vienna};
 
-\draw[line width=1.5pt] (Amsterdam) -- node[left]{11.25} (Copenhagen);
-\draw (Amsterdam) -- node[above]{6.17} (Berlin);
-\draw[line width=1.5pt] (Amsterdam) -- node[left]{1.88} (Brussels);
-\draw[line width=1.5pt] (Brussels) -- node[above]{3.17} (Frankfurt);
-\draw[line width=1.5pt] (Frankfurt) -- node[left]{3.17} (Munich);
-\draw (Munich) -- node[above]{6.08} (Prague);
-\draw[line width=1.5pt] (Munich) -- node[below]{4.17} (Vienna);
-\draw (Prague) -- node[]{4.58} (Berlin);
-\draw[line width=1.5pt] (Prague) -- node[]{4.5} (Vienna);
-\draw[line width=1.5pt] (Berlin) -- node[above]{6.08} (Warsaw);
-\draw[line width=1.5pt] (Prague) -- node[above]{8.67} (Warsaw);
-\draw (Vienna) -- node[below]{7.5} (Warsaw);
-\draw[line width=1.5pt] (Hamburg) -- node[right]{4.5} (Copenhagen);
-\draw[line width=1.5pt] (Berlin) -- node[right]{1.58} (Hamburg);
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{675} (Copenhagen);
+\draw (Amsterdam) -- node[above]{370} (Berlin);
+\draw[line width=1.5pt] (Amsterdam) -- node[left]{113} (Brussels);
+\draw[line width=1.5pt] (Brussels) -- node[above]{190} (Frankfurt);
+\draw[line width=1.5pt] (Frankfurt) -- node[left]{190} (Munich);
+\draw (Munich) -- node[above]{365} (Prague);
+\draw[line width=1.5pt] (Munich) -- node[below]{250} (Vienna);
+\draw (Prague) -- node[left]{275} (Berlin);
+\draw[line width=1.5pt] (Prague) -- node[left]{270} (Vienna);
+\draw[line width=1.5pt] (Berlin) -- node[above]{365} (Warsaw);
+\draw[line width=1.5pt] (Prague) -- node[above]{520} (Warsaw);
+\draw (Vienna) -- node[below]{450} (Warsaw);
+\draw[line width=1.5pt] (Hamburg) -- node[right]{270} (Copenhagen);
+\draw[line width=1.5pt] (Berlin) -- node[right]{95} (Hamburg);
 \end{tikzpicture}
 
-\ding{51} Solution to the Travelling Salesman Problem.
+\ding{51} Solution to the Travelling Salesman Problem. (Length: $2938$ Minutes)
 \end{center}
 \end{frame}
 
@@ -260,7 +259,7 @@ Main steps:
 \item Reduce $(G, F)$ to $(G', F')$ by changing specific subgraphs in $G$.
 \item If $F'$ contains a Hamiltonian cycle then return $F'$.
 \item If a Hamiltonian cycle cannot be made, then abort.
-\item If $G \setminus F$ is a collection of disjoint cycles of length four then solve and return.
+\item If $G' \setminus F'$ is a collection of disjoint cycles of length four then solve and return.
 \item Pick an edge $xy \in E' \setminus F'$ according to specific rules.
 \item Call Eppstein's algorithm on $(G', F' \cup \{xy\})$ and $(G' \setminus \{xy\}, F')$.
 \item Return the shortest Hamiltonian cycle or abort if no cycle is found.
@@ -272,8 +271,8 @@ Main steps:
 The main bottleneck of Eppstein's algorithm is the recursive calls. So how is the edge to force or remove chosen?
 
 \begin{enumerate}
-\item If $G' \setminus F'$ has a cycle of four vertices such that two of the vertices are incident to forced edges, pick one vertex $x$ in the cycle that is not incident to a forced edge and another vertex $y$ not in the cycle.
-\item Otherwise if $F' \neq \emptyset$, pick an edge $(y, z) \in F$ and then chooses an adjacent edge $(x, y) \notin F$ as long as $(x, y)$ is not part of a disjoint cycle of four vertices in $G \setminus F$.
+\item If $G' \setminus F'$ has a cycle of four vertices such that two of the vertices are incident to forced edges, pick an edge incident to the cycle.
+\item Otherwise if there are any forced edges, pick an edge adjacent to a forced edge.
 \item Otherwise pick any edge.
 \end{enumerate}
 
@@ -289,7 +288,7 @@ Eppstein showed that these branching rules broke the problem size into one of tw
 \item A subproblem with at least two more forced edges, and a subproblem with at least five more forced edges.
 \end{enumerate}
 
-Linear recurrence solving shows that the overall runtime is $O(2^{n/3})$.
+Linear recurrence solving shows that the overall runtime is $O(2^{|V|/3})$.
 \end{frame}
 
 \begin{frame}
@@ -334,9 +333,9 @@ D\"urr and H\o yer's algorithm for minimum finding can be used if we can map a b
 
 We can map binary strings to Eppstein's algorithm by removing an edge if the next bit is $0$ and forcing it if the next bit is $1$.
 
-However, the longest bit string we might need is $n/2$ bits, because of the case which only adds two forced edges to the graph.
+However, the longest bit string we might need is $|V|/2$ bits, because of the case which only adds two forced edges to the graph.
 
-Thus we have a runtime of $O(2^{n/4})$.
+Thus we have a runtime of $O(2^{|V|/4})$.
 
 We need to take advantage of the problem's structure if we want to do even better.
 \end{frame}
@@ -388,8 +387,8 @@ To fit the framework used by Montanaro's quantum algorithm, we need to rewrite E
 \item Reduce $(G, F)$ to $(G', F')$ by changing specific subgraphs in $G$.
 \item If $F'$ contains a Hamiltonian cycle then return $\top$.
 \item If a Hamiltonian cycle cannot be made, then return $\bot$.
-\item If $G \setminus F$ is a collection of disjoint cycles of length four then return $\top$.
-\item Otherwise return ?
+\item If $G' \setminus F'$ is a collection of disjoint cycles of length four then return $\top$.
+\item Otherwise return $?$
 \end{enumerate}
 \end{frame}
 
@@ -400,7 +399,7 @@ To fit the framework used by Montanaro's quantum algorithm, we need to rewrite E
 \item Apply any already known assignments to the graph.
 \item Reduce $(G, F)$ to $(G', F')$ by changing specific subgraphs in $G$.
 \item Pick an edge $xy \in E' \setminus F'$ according to specific rules.
-\item If $xy$ is made up of several edges in $E$ then return one of the edges in $xy$.
+\item If $xy$ is made up of multiple edges in $E$ then return one of the edges in $xy$.
 \item Otherwise return $xy$.
 \end{enumerate}
 \end{frame}
@@ -410,7 +409,7 @@ To fit the framework used by Montanaro's quantum algorithm, we need to rewrite E
 
 The algorithm as it is currently described will return a randomly chosen Hamiltonian cycle with probability $\delta$ in $O(2^{|V|/6}\poly(|V|)\log(1/\delta))$ time. However, this is not guaranteed to be the shortest Hamiltonian cycle.
 
-To find the shortest Hamiltonian cycle, we will repeat the process, but with the extra condition that the predicate returns $\bot$ if the combined cost of all the cycles in $F'$ is above a threashold $T$. We then use binary search to find the shortest Hamiltonian cycle after $O(\log N)$ calls of the algorithm, where
+To find the shortest Hamiltonian cycle, we will repeat the process, but with the extra condition that the predicate returns $\bot$ if the combined cost of all the cycles in $F'$ is above a threshold $T$. We then use binary search to find the shortest Hamiltonian cycle after $O(\log N)$ calls of the algorithm, where
 
 $$N = \sum_{i = 0}^{n-1}\max_{j = 0}^{n-1}\{c_{i,j}\}$$
 
@@ -420,7 +419,7 @@ is an upper bound for the length of any Hamiltonian cycle.
 \begin{frame}
 \frametitle{Quantum Speedup on Cubic Graphs}
 \begin{theorem}
-There is a quantum algorithm which solves the TSP for graphs of bounded degree $3$ with probability $\delta$ in time $O(\log N2^{n/6}\poly(n)\log(\log N/\delta))$.
+There is a quantum algorithm which solves the TSP for graphs of bounded degree $3$ with probability $\delta$ in time $O(\log N2^{|V|/6}\poly(|V|)\log(\log N/\delta))$.
 \end{theorem}
 \end{frame}
 
@@ -483,15 +482,15 @@ Note that this splitting does increase the number of vertices, but it also incre
 
 By applying D\"urr and H\o yer's algorithm for minimum finding, we can find the shortest Hamiltonian cycle after $(3/2)^{k/2}$ repeated calls. Thus our runtime is
 
-$$O\left(\left(\frac{3}{2}\right)^{\frac{k}{2}}\log N2^{\frac{n}{3}}\poly(n)\log\left(\frac{\log N}{\delta}\right)\right).$$
+$$O\left(\left(\frac{3}{2}\right)^{\frac{k}{2}}\log N2^{\frac{|V|}{3}}\poly(|V|)\log\left(\frac{\log N}{\delta}\right)\right).$$
 \end{frame}
 
 \begin{frame}
 \frametitle{Bounded Degree $4$ Graphs}
 
-Since $k \leq n$, we can bound this and work out the runtime to be
+Since $k \leq |V|$, we can bound this and work out the runtime to be
 
-$$O(1.375^n\log N\poly(n)\log(\log N/\delta)).$$
+$$O(1.375^{|V|}\log N\poly(|V|)\log(\log N/\delta)).$$
 
 This beats the best known classical runtime of $O(1.692^n)$ by Xiao and Nagamochi\footnote{{\em Theory of Computing Systems}, {\bf 58}(2), pp.\ 241--272 (2016)}.
 \end{frame}
@@ -591,19 +590,14 @@ If $a$ and $b$ are the two edges which are part of the shortest Hamiltonian cycl
 
 \begin{frame}
 \frametitle{Bounded Degree $5$ Graphs}
-There are $10^k$ ways of reducing the graph to a bounded degree $4$ graph, of which $6^k$ will have the shortest Hamiltonian cycle.
+Let $k$ be the number of vertices of degree $5$. There are $10^k$ ways of reducing the graph, of which $6^k$ will preserve the solution.
 
 By using the same techniques as before, we get a runtime of
 
-$$O\left(\left(\frac{10}{6}\right)^{\frac{k}{2}}1.375^n\log N\poly(n)\log\left(\frac{\log N}{\delta}\right)\right).$$
-\end{frame}
-
-\begin{frame}
-\frametitle{Bounded Degree $5$ Graphs}
-
-Since $k \leq n$, we can bound this and work out the runtime to be
-
-$$O(1.775^n\log N\poly(n)\log(\log N/\delta)).$$
+\begin{align*}
+&O\left(\left(\frac{10}{6}\right)^{\frac{k}{2}}1.375^{|V|u}\log N\poly(|V|)\log\left(\frac{\log N}{\delta}\right)\right).\\
+=&O(1.775^{|V|}\log N\poly(|V|)\log(\log N/\delta)).
+\end{align*}
 
 This beats the best known classical runtime by Bj\"orklund et al.\ of $O(1.932^n\poly(n))$\footnote{{\em Proceedings of the 35th International Colloquium on Automata, Languages and Programming}, pp.\ 198--209 (2008)}.
 \end{frame}
@@ -713,9 +707,9 @@ If $a$ and $b$ are the two edges which are part of the shortest Hamiltonian cycl
 
 \begin{frame}
 \frametitle{Bounded Degree $6$ Graphs}
-As we have the same splitting results as we had for bounded degree $5$, we have the same runtime of $O(1.775^n\log N\poly(n)\log(\log N/\delta))$.
+As we have the same splitting results as we had for bounded degree $5$, we have the same runtime of $O(1.775^{|V|}\log N\poly(|V|)\log(\log N/\delta))$.
 
-This beats the best known classical time by Bj\"orklund et al.\ of $O(1.967^n\poly(n))$.
+This beats the best known classical time by Bj\"orklund et al.\ of $O(1.967^{|V|}\poly(|V|))$.
 \end{frame}
 
 \begin{frame}
@@ -723,11 +717,11 @@ This beats the best known classical time by Bj\"orklund et al.\ of $O(1.967^n\po
 There are $\binom{7}{4} = 35$ ways of splitting a vertex of degree $7$ into one vertex of degree $5$ and another of degree $4$ connected by a forced edge. Of these, $35 - \binom{4}{2} - \binom{5}{2} = 26$ will succeed. Thus we achieve a runtime of
 
 \begin{align*}
-&O\left(\left(\frac{35}{26}\right)^{k/2}1.768^n\log N\poly(n)\log\left(\frac{1}{\delta}\right)\right)\\
-= &O(2.0513^n\log N\poly(n)\log(1/\delta)).
+&O\left(\left(\frac{35}{26}\right)^{k/2}1.768^n\log N\poly(n)\log\left(\frac{\log N}{\delta}\right)\right)\\
+= &O(2.0513^n\log N\poly(n)\log(\log N/\delta)).
 \end{align*}
 
-Thus we are no longer beating Bj{\"o}rklund et al., which has a runtime of $O(1.9840^n\poly(n))$.
+We are no longer beating Bj{\"o}rklund et al., which has a runtime of $O(1.9840^n\poly(n))$.
 \end{frame}
 
 %------------------------------------------------
